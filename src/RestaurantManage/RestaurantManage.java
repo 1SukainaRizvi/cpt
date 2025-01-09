@@ -1,21 +1,11 @@
-package src;
-import java.until.ArrayList;
+package RestaurantManage;
+
+import java.util.ArrayList;
 
 public class RestaurantManage {
+}
 
-    class Menuitem {
-        private string name;
-        private double price;
-        private String category; 
-
-        public Menuitem (String name, String category, double price) {
-            this.name = name;
-            this.price = price;
-            this.category = category; 
-        }
-    }
-
-    public class Order {
+     class Order {
         private int orderID;
         private ArrayList<MenuItem> items;
         private double totalPrice;
@@ -31,14 +21,14 @@ public class RestaurantManage {
 
         public double calculateTotal() {
             totalPrice = 0;
-            for (MenuItem item : item) {
+            for (MenuItem item : items) {
                 totalPrice += item.getPrice();
             }
             return totalPrice;
         }
     }
 
-    public class Restaurant {
+     class Restaurant {
         private ArrayList<Order> orders;
 
         public Restaurant() {
@@ -59,4 +49,4 @@ public class RestaurantManage {
             }
         }
     }
-}
+
