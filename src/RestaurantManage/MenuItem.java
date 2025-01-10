@@ -11,8 +11,15 @@ public class MenuItem {
         this.category = category; 
     }
 
+    public String getName() {
+        return name;
+    }
+
     public double getPrice() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getPrice'");
+        return price;
+    }
+
+    public String category() {
+        return category;
     }
 }
