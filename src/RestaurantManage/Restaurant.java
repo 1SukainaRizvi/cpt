@@ -3,14 +3,18 @@ package RestaurantManage;
 import java.util.ArrayList;
 
 public class Restaurant {
+    public static final String displayMenu = null;
     private ArrayList<Order> orders;
+    private ArrayList<MenuItem> menu;
 
         public Restaurant() {
             this.orders = new ArrayList<>();
+            this.menu = new ArrayList<>();
         }
 
         public void addMenuItem (MenuItem item) {
             // Logic to add a menu item
+            menu.add(item);
         }
 
         public void placeOrder(Order order) {
@@ -29,11 +33,11 @@ public class Restaurant {
         }
 
         public ArrayList<MenuItem> getMenu() {
-            return menu;
+            return this.menu;
         }
     
         public void displayMenu() {
-            for (MenuItem item : menu) {
+                    for (MenuItem item : this.menu) {
                 System.out.println(item.getName() + " (" + item.getCategory() + "): $" + item.getPrice());
             }
         }

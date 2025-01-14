@@ -1,6 +1,5 @@
 package RestaurantManage;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RestaurantManage {
@@ -19,7 +18,7 @@ public class RestaurantManage {
             System.out.println("1. View Menu");
             System.out.println("2. Place Order");
             System.out.println("3. View Orders");
-            System.out.println("4. Manage Inventory");
+            System.out.println("4. Customize Menu");
             System.out.println("5. Exit");
 
             int choice = scanner.nextInt();
@@ -27,6 +26,7 @@ public class RestaurantManage {
 
             switch (choice) {
                 case 1:
+
                     restaurant.displayMenu();
                     break;
                 case 2:

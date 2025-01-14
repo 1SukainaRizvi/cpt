@@ -5,7 +5,7 @@ public class MenuItem {
     private double price;
     private String category; 
 
-    public MenuItem (String name, String category, double price) {
+    public MenuItem (String name, double price, String category) {
         this.name = name;
         this.price = price;
         this.category = category; 
@@ -19,7 +19,12 @@ public class MenuItem {
         return price;
     }
 
-    public String category() {
+    public String getCategory() {
         return category;
+    }
+
+    @Override 
+    public String toString() { 
+        return name + " (" + category + "): $" + price; 
     }
 }
