@@ -3,16 +3,25 @@ package RestaurantManage;
 import java.util.Scanner;
 
 public class RestaurantManage {
+    /** 
+     * The main method to run the restaurant management system. 
+     * @param args the command line arguments */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Restaurant restaurant = new Restaurant();
         int orderCounter = 1;
 
         // Important menu items
+        /**
+         * Adds initial menu items to the restaurant
+         */
         restaurant.addMenuItem(new MenuItem("Coffee", 2.50, "Beverage"));
         restaurant.addMenuItem(new MenuItem("Burger", 5.00, "Main Course"));
         restaurant.addMenuItem(new MenuItem("Salad", 3.50, "Appetizer"));
 
+        /**
+         * Provides a loop for users to interact with. Such as view menu, place order, view orders, customize menu.
+         */
         while (true) {
             System.out.println("Welcome to the Restaurant! Please choose an action:");
             System.out.println("1. View Menu");
@@ -26,10 +35,11 @@ public class RestaurantManage {
 
             switch (choice) {
                 case 1:
-
+                    // Displays the menu to the user
                     restaurant.displayMenu();
                     break;
                 case 2:
+                    // Allows users to place an order
                     Order order = new Order(orderCounter++);
                     while (true) {
                         System.out.println("Enter the name of the item to add to the order (or type 'done' to finish):");
@@ -60,6 +70,7 @@ public class RestaurantManage {
                     restaurant.viewOrders();
                     break;
                 case 4:
+                    // Allows users to customize the menu by adding or removing items
                     System.out.println("1. Add Menu Item");
                     System.out.println("2. Remove Menu Item");
                     int manageChoice = scanner.nextInt();
@@ -95,6 +106,7 @@ public class RestaurantManage {
                     break;
                 case 5:
                     System.out.println("Thank you for using the Restaurant System. Goodbye!");
+                    // Closes scanner
                     scanner.close();
                     return;
                 default:
