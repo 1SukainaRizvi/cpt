@@ -1,5 +1,11 @@
 package RestaurantManage;
 
+/**
+ * author: Sukaina Rizvi
+ * 01/16/2025
+ * Restaurant Mangement System
+ */
+
 import java.util.Scanner;
 
 public class RestaurantManage {
@@ -56,7 +62,7 @@ public class RestaurantManage {
                             }
                         }
 
-                        if (menuItem != null) {
+                        if (!menuItem.equals(null)) {
                             order.addItem(menuItem);
                             System.out.println(menuItem.getName() + " added to the order.");
                         } else {
@@ -116,4 +122,3 @@ public class RestaurantManage {
         }
     }
 }
-   
