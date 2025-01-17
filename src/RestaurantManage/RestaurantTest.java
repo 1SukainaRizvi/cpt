@@ -38,7 +38,6 @@ public class RestaurantTest {
         restaurant.placeOrder(order);
 
         // Assert
-        // Verifying that the order was placed by checking the output of the viewOrders method
         restaurant.viewOrders();
     }
 
@@ -55,8 +54,6 @@ public class RestaurantTest {
         restaurant.viewOrders();
 
         // Assert
-        // This is just a test for coverage purposes, actual visual verification
-        // is recommended to check the printed output.
     }
 
     @Test
@@ -70,7 +67,5 @@ public class RestaurantTest {
         restaurant.displayMenu();
 
         // Assert
-        // This is just a test for coverage purposes, actual visual verification
-        // is recommended to check the printed output.
     }
 }
